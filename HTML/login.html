@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <style>
+        body{
+            background-color: rgb(87, 87, 87);
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>login</h1>
+<body style="color: white;">
+    <h1>Login Here</h1>
+    <form method="post" action="login.jsp" name="login">
+        <label for="uname">Username</label>
+        <input type="text" name="uname" placeholder="Enter Username" required/><br>
+        <label for="pwd">Password</label>
+        <input type="password" name="pwd" placeholder="Enter Password" required>
+        <br>
+        <input type="submit" value="Login"/>
+        <input type="reset" value="Reset">
+    </form>
 </body>
 </html>
