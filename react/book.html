@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore</title>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        function Header(){
+            return <h1>MyBookStore</h1>;
+        }
+
+        function Book(props){
+            return(
+                <div id="book">
+                    <img height="200" src={props.url} alt={props.name}/>
+                    <h3>{props.name}</h3>
+                    <h5>Price: {props.price}</h5>
+                    <button onClick={() => props.setCount(props.count + 1)}>Add to cart</button>
+                </div>
+            );
+        }
+
+        function App(){
+            const [count, setCount] = React.useState(0);
+
+            return (
+                <div>
+
+                    <div id="main">
+                        <Book 
+                            url="https://m.media-amazon.com/images/I/419aJfhczCL._SY445_SX342_ControlCacheEqualizer_.jpg" 
+                            name="Atomic Habits" 
+                            price="$2" 
+                            count={count} 
+                            setCount={setCount} 
+                        />
+                        <Book 
+                            url="https://m.media-amazon.com/images/I/41mxvU9Tu6L._SY445_SX342_ControlCacheEqualizer_.jpg" 
+                            name="The Psychology of Money" 
+                            price="$5" 
+                            count={count} 
+                            setCount={setCount} 
+                        />
+                    </div>
+                     <Header />
+                    <h3>Cart: {count}</h3>
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(<App />);
+    </script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        #main {
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+        }
+        #book {
+            display: flex;
+            flex-direction: column;
+            background-color: antiquewhite;
+            align-items: center;
+            justify-content: center;
+            width: 400px;
+            margin: 20px;
+            padding: 10px;
+            border: 2px solid black;
+            text-align-last: center;
+            border-radius: 10px;
+        }
+    </style>
+</body>
+</html>
