@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.auth-box {
+  border: 1px solid #ccc;
+  padding: 20px;
+  background: #ffffff;
+  margin-top: 50px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+}
+
+
+
+.users-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.user-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  background: #fff;
+}
+
+.card-actions {
+  margin-top: 15px;
+}
+
+.card-actions button {
+  margin-right: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.link {
+  color: blue;
+  text-decoration: underline;
+}
